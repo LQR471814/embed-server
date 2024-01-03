@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "embed_server/embed_server";
+
+message Empty {}
+
+message EmbedOptions {
+  string model = 1;
+  int64 maxSeqLength = 2;
+}
+
+message EmbedRequest {
+  repeated string sentences = 1;
+  bool normalizeEmbeddings = 2;
+}
+
+message FloatArray {
+  repeated float array = 1;
+}
+message Embeddings {
+  repeated FloatArray tensor = 1;
+}
+
+service EmbedServer {
+  rpc Configure(EmbedOptions) returns (Empty);
+  rpc Embed(EmbedRequest) returns (Embeddings);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "embed-server-pb",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.9.3",
+    "@protobuf-ts/protoc": "^2.9.3",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@protobuf-ts/runtime": "^2.9.3",
+    "@protobuf-ts/runtime-rpc": "^2.9.3"
+  }
+}

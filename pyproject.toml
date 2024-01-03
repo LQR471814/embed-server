@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "embed-server"
+version = "0.1.0"
+description = "A grpc server that generates word embeddings using `sentence-transformers`."
+authors = ["LQR471814 <42160088+LQR471814@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "embed_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sentence-transformers = "^2.2.2"
+grpcio-tools = "^1.60.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
